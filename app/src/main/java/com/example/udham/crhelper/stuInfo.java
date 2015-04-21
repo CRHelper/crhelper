@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.parse.ParseObject;
+
 
 public class stuInfo extends Activity {
 
@@ -13,27 +15,22 @@ public class stuInfo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stu_info);
+        getDetail();
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_stu_info, menu);
-        return true;
+    public static void getDetail()
+    {
+        ParseObject detail = new ParseObject("Marks");
+        detail.put("Roll_No", "09111503111");
+        detail.put("Name", "Geet Mehta");
+        detail.put("Email", "geet.mehta16@gmail.com");
+        detail.put("Subject_1", 80);
+        detail.put("Subject_2", 70);
+        detail.put("Subject_3", 90);
+
+        detail.saveInBackground();
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
