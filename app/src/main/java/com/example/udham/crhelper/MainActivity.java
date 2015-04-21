@@ -3,6 +3,7 @@ package com.example.udham.crhelper;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View.OnClickListener;
 import android.view.View;
@@ -15,14 +16,24 @@ public class MainActivity extends Activity {
 
     Button b1,b2;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerOnButton();
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "Egsn9KbBiDHrcXa784wgbBHlZJebpmEoydC13ivt", "4duy7HwfneN5y1ZhEUipAjCp6umoDMiOJE7aVTQV");
+
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            public Void doInBackground(Void... params) {
+                // Enable Local Datastore.
+                Parse.enableLocalDatastore(MainActivity.this);
+
+                Parse.initialize(MainActivity.this, "Egsn9KbBiDHrcXa784wgbBHlZJebpmEoydC13ivt", "4duy7HwfneN5y1ZhEUipAjCp6umoDMiOJE7aVTQV");
+                return null;
+            }
+        }.execute();
+
     }
 
     public void addListenerOnButton() {
@@ -35,7 +46,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, StudentActivity.class);
+                Intent intent = new Intent(context, login.class);
+                intent.putExtra("key","student");
                 startActivity(intent);
 
             }
@@ -47,7 +59,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, teachersActivity.class);
+                Intent intent = new Intent(context, login.class);
+                intent.putExtra("key","teacher");
                 startActivity(intent);
 
             }
