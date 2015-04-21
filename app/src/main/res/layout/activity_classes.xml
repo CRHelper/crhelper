@@ -45,13 +45,7 @@
             android:textColor="#000000"
             android:textSize="20sp"/>
 
-        <ExpandableListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/expandableListView"
-            android:layout_below="@+id/expandlist"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="43dp" />
+
 
     </LinearLayout>
 

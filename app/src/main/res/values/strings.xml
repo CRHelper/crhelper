@@ -23,4 +23,27 @@
     <string name="title_activity_sign_up">sign_up</string>
     <string name="title_activity_stu_info">stuInfo</string>
     <string name="title_activity_classes">classes</string>
+    <string name="title_activity_stu_list">stu_list</string>
+
+
+    <string-array name="names">
+        <item>Neeraj</item>
+        <item>Rahul</item>
+        <item>Udham</item>
+        <item>Gurmeet</item>
+        <item>Manoj</item>
+        <item>Sumit</item>
+        <item>Parikshit</item>
+    </string-array>
+    <string-array name="roll">
+        <item>00111503111</item>
+        <item>00211503111</item>
+        <item>00311503111</item>
+        <item>00511503111</item>
+        <item>00811503111</item>
+        <item>00911503111</item>
+        <item>01111503111</item>
+
+
+    </string-array>
 </resources>

@@ -44,7 +44,7 @@ public class teachersActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, attendance.class);
+                Intent intent = new Intent(context, classes.class);
                 startActivity(intent);
 
             }
@@ -68,7 +68,7 @@ public class teachersActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, assignmentActivity.class);
+                Intent intent = new Intent(context, timetable.class);
                 startActivity(intent);
 
             }
@@ -81,7 +81,7 @@ public class teachersActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, stuInfo.class);
+                Intent intent = new Intent(context, stu_list.class);
                 startActivity(intent);
 
             }

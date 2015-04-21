@@ -68,6 +68,10 @@
             android:name=".classes"
             android:label="@string/title_activity_classes" >
         </activity>
+        <activity
+            android:name=".stu_list"
+            android:label="@string/title_activity_stu_list" >
+        </activity>
     </application>
 
 </manifest>
