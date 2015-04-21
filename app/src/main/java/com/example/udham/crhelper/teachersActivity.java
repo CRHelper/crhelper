@@ -10,15 +10,26 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 
 public class teachersActivity extends Activity {
 
-    TextView tv1,tv2,tv3,tv4;
+    TextView tv1,tv2,tv3,tv4,welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers);
+
+
+        welcome=(TextView) findViewById(R.id.subTitle);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            // do stuff with the user
+            welcome.setText("Welcome "+currentUser.getUsername());
+        }
         addListenerOnButton();
     }
 
