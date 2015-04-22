@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bolts-android-1.2.0/bolts-android-1.2.0.iml" filepath="$PROJECT_DIR$/bolts-android-1.2.0/bolts-android-1.2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/crhelper.iml" filepath="$PROJECT_DIR$/crhelper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/crhelper.iml" filepath="$PROJECT_DIR$/crhelper.iml" />
     </modules>
   </component>
 </project>
