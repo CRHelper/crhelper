@@ -11,10 +11,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.FindCallback;
 import com.parse.LogInCallback;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.text.ParseException;
+import java.util.List;
 
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -61,28 +65,31 @@ public class login extends Activity {
         login.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 uname = username.getText().toString();
                 pwd = password.getText().toString();
 
-                ParseUser.logInInBackground(uname, pwd, new LogInCallback() {
-                    public void done(ParseUser user, com.parse.ParseException e) {
-                        if (user != null) {
+                if(data.equals("student"))
+                {
+                    ParseUser.logInInBackground(uname, pwd, new LogInCallback() {
+                        public void done(ParseUser user, com.parse.ParseException e) {
+                            if (user != null) {
 
-                            if(data.equals("student"))
-                            {
                                 student_login();
-                            }
-                            else
-                            {
-                                teacher_login();
-                            }
-                        } else {
-                            Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
 
+                            } else {
+                                Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
+                            }
                         }
-                    }
 
-                });
+                    });
+                }
+                else if(data.equals("teacher"))
+                {
+                    teacher_login();
+                }
+
             }
 
         });
@@ -107,8 +114,40 @@ public class login extends Activity {
     }
     public void teacher_login()
     {
-        Intent intent = new Intent(this, teachersActivity.class);
-        startActivity(intent);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Teachers");
+        //query.whereExists(uname);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> userList, com.parse.ParseException e) {
+                if (e == null) {
+                    if (userList.size() > 0) {
+
+                        for (int i = 0; i < userList.size(); i++) {
+                            ParseObject p = userList.get(i);
+                            if (uname.equals(p.getString("username")) && pwd.equals(p.getString("Password"))) {
+
+                                Intent intent = new Intent(login.this, teachersActivity.class);
+                                startActivity(intent);
+
+                            }
+                            else {
+                                Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+
+
+                            }
+                        }
+                    }
+
+                } else {
+                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+
+
+                }
+            }
+        });
+
+
+
     }
 
     public void student_login()
@@ -116,5 +155,6 @@ public class login extends Activity {
         Intent intent = new Intent(this, StudentActivity.class);
         startActivity(intent);
     }
+
 
 }
