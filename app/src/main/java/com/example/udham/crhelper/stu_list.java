@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,84 +25,82 @@ import java.util.ArrayList;
 public class stu_list extends Activity {
 
     ListView list;
+    String[] names;
+    String[] roll;
+    int[] image={R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stu_list);
+
+        Resources res = getResources();
+        names=res.getStringArray(R.array.names);
+        roll=res.getStringArray(R.array.roll);
         list=(ListView) findViewById(R.id.stulistView);
-        list.setAdapter(new crAdapter(this));
+
+        crAdapter adapter=new crAdapter(this,names,image,roll);
+        list.setAdapter(adapter);
+
 
     }
 
 
-    class SingleRow
-    {
-        String names;
-        String roll;
-        int image;
 
 
-       SingleRow(String names, String roll,int image) {
-            this.names=names;
-            this.roll=roll;
-            this.image=image;
-        }
-    }
-
-    class crAdapter extends BaseAdapter
+    class crAdapter extends ArrayAdapter<String>
     {
 
-        ArrayList<SingleRow> list;
         Context context;
-        crAdapter(Context c)
+        int[] images;
+        String[] titleArray;
+        String[] rollArray;
+
+        crAdapter(Context c, String[] names, int imgs[], String[] roll) {
+            super(c, R.layout.single_row, R.id.textView, names);
+            this.context = c;
+            this.images = imgs;
+            this.titleArray=names;
+            this.rollArray=roll;
+
+        }
+
+
+        class MyViewHolder
         {
-            context=c;
-            list=new ArrayList<SingleRow>();
-
-            Resources res=c.getResources();
-            String[] names=res.getStringArray(R.array.names);
-            String[] roll=res.getStringArray(R.array.roll);
-            int[] image={R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.profile};
-
-            for(int i=0;i<8;i++)
+            ImageView myImage;
+            TextView myName;
+            TextView myRoll;
+            MyViewHolder(View v)
             {
-                list.add(new SingleRow(names[i],roll[i],image[i]));
+                myImage= (ImageView) v.findViewById(R.id.imageView);
+                myName= (TextView) v.findViewById(R.id.textView1);
+                myRoll= (TextView) v.findViewById(R.id.textView2);
             }
-        }
-
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return list.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row=inflater.inflate(R.layout.single_row, parent , false);
+            View row=convertView;
+            MyViewHolder holder=null;
+            if(row==null) {
+                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                row = inflater.inflate(R.layout.single_row, parent, false);
+                holder=new MyViewHolder(row);
+                row.setTag(holder);
+                Log.d("CR","Creating new row");
+            }
+            else
+            {
+                holder= (MyViewHolder) row.getTag();
+                Log.d("CR","Recycling");
+            }
 
-            TextView names=(TextView)row.findViewById(R.id.textView1);
-            TextView roll=(TextView)row.findViewById(R.id.textView2);
-            TextView image=(TextView)row.findViewById(R.id.imageView);
+            holder.myImage.setImageResource(images[position]);
+            holder.myName.setText(titleArray[position]);
+            holder.myRoll.setText(rollArray[position]);
 
-            SingleRow temp=list.get(position);
-
-            names.setText(temp.names);
-            roll.setText(temp.roll);
-            image.setText(temp.image);
-
-
-            return null;
+            return row;
         }
     }
 
