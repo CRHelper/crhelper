@@ -96,6 +96,7 @@ public class login extends Activity {
             out = (TextView) findViewById(R.id.textView);
             username = (AutoCompleteTextView) findViewById(R.id.email);
             password = (EditText) findViewById(R.id.password);
+
             data = getIntent().getExtras().getString("key");
 
 
