@@ -2,6 +2,7 @@ package com.example.udham.crhelper;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 
 public class stu_list extends Activity {
 
+
     ListView list;
     String[] names;
     String[] roll;
@@ -41,10 +43,22 @@ public class stu_list extends Activity {
         crAdapter adapter=new crAdapter(this,names,image,roll);
         list.setAdapter(adapter);
 
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        public void onItemClick(AdapterView<?> parent, View v,
+                                                                int position, long id) {
+
+                                            Intent myIntent = new Intent(v.getContext(), stuInfo.class);
+                                            startActivityForResult(myIntent, 0);
+
+                                        }
+                                    }
+        );
+
+
+
+
 
     }
-
-
 
 
     class crAdapter extends ArrayAdapter<String>

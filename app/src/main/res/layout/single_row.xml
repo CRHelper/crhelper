@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:layout_width="80dp"
@@ -14,7 +15,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Name"
-        android:textSize="40sp"
+        android:textSize="30sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
         android:id="@+id/textView1"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -25,7 +28,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Roll"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/imageView"
         android:layout_toEndOf="@+id/imageView" />
