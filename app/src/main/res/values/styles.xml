@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     android:theme="@android:style/Theme.NoTitleBar">
 
-    <style name="AppTheme" parent="android:Theme.DeviceDefault.Dialog.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat">
     <!-- theme customizations -->
     </style>
 
