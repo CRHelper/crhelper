@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.udham.crhelper.Update"
+
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/tt" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tt_title"
+            android:text="Time Table"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:id="@+id/button"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/attend"/>
+
+    <ImageButton
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:id="@+id/button2"
+        android:layout_marginTop="79dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_below="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:src="@drawable/marks"/>
+
+</RelativeLayout>
