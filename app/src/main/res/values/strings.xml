@@ -43,8 +43,24 @@
         <item>00811503111</item>
         <item>00911503111</item>
         <item>01111503111</item>
-
-
+    </string-array>
+    <string-array name="assignment">
+        <item>Assignment 1</item>
+        <item>Assignment 2</item>
+        <item>Assignment 3</item>
+        <item>Assignment 4</item>
+    </string-array>
+    <string-array name="subject">
+        <item>Subject 1</item>
+        <item>subject 2</item>
+        <item>subject 3</item>
+        <item>subject 4</item>
+    </string-array>
+    <string-array name="completion">
+        <item>completion % 1</item>
+        <item>completion % 2</item>
+        <item>completion % 3</item>
+        <item>completion % 4</item>
     </string-array>
     <string name="title_activity_about">About</string>
 </resources>

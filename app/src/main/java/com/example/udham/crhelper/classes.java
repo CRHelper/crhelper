@@ -1,107 +1,80 @@
 package com.example.udham.crhelper;
 
 import android.app.Activity;
-import android.os.AsyncTask;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
-
-import com.parse.FindCallback;
-import com.parse.Parse;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
-import java.util.List;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class classes extends Activity {
 
-    EditText roll,attn;
-    Button update;
-    RadioGroup rgp;
-    RadioButton rb;
+    ImageButton b1,b2,b3,b4;
 
-    String roll_no,attendance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classes);
-        getdata();
-
-        addListenerButton();
+        addListenerOnButton();
     }
 
-    public void getdata()
-    {
-        roll=(EditText) findViewById(R.id.roll_no);
-        attn=(EditText) findViewById(R.id.attn);
-        rgp=(RadioGroup) findViewById(R.id.radioGroup);
-        update=(Button) findViewById(R.id.update);
+    public void addListenerOnButton() {
 
+        final Context context = this;
 
+        b1= (ImageButton) findViewById(R.id.imageButton1);
 
-    }
-    public void addListenerButton()
-    {
-        update.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                roll_no=roll.getText().toString();
-                attendance=attn.getText().toString();
-
-                int sel=rgp.getCheckedRadioButtonId();
-                rb = (RadioButton) findViewById(sel);
-                final String ch=rb.getText().toString();
-
-                new AsyncTask<Void, Void, Void>() {
-                    @Override
-                    public Void doInBackground(Void... params) {
-
-
-                        ParseQuery<ParseObject> query = ParseQuery.getQuery("Attendance");
-                        query.whereEqualTo("Roll_No",roll_no);
-                        query.findInBackground(new FindCallback<ParseObject>() {
-                            @Override
-                            public void done(List<ParseObject> userList, com.parse.ParseException e) {
-                                if (e == null) {
-                                    if (userList.size() > 0) {
-
-                                        for (int i = 0; i < userList.size(); i++) {
-                                            ParseObject p = userList.get(i);
-                                            p.put(ch,attendance);
-                                            p.saveInBackground();
-
-
-                                            Toast.makeText(classes.this,
-                                                    "Updating...", Toast.LENGTH_LONG).show();
-
-
-                                        }
-                                    }
-
-                                }
-                            }
-                        });
-
-                        return null;
-                    }
-                }.execute();
-
-
-
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
 
             }
         });
 
-    }
+        b2= (ImageButton) findViewById(R.id.imageButton2);
 
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b3= (ImageButton) findViewById(R.id.imageButton3);
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        b4= (ImageButton) findViewById(R.id.imageButton4);
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+    }
 
 }

@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, login.class);
-                intent.putExtra("key","student");
+                Intent intent = new Intent(context, StudentActivity.class);
+               // intent.putExtra("key","student");
                 startActivity(intent);
 
             }
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, login.class);
-                intent.putExtra("key","teacher");
+                Intent intent = new Intent(context, teachersActivity.class);
+               // intent.putExtra("key","teacher");
                 startActivity(intent);
 
             }
