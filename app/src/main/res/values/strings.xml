@@ -63,4 +63,7 @@
         <item>completion % 4</item>
     </string-array>
     <string name="title_activity_about">About</string>
+    <string name="title_activity_update">Update</string>
+    <string name="title_activity_update_attendance">update_attendance</string>
+    <string name="title_activity_update_marks">update_marks</string>
 </resources>

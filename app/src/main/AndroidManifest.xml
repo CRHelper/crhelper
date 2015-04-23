@@ -72,6 +72,18 @@
             android:name=".stu_list"
             android:label="@string/title_activity_stu_list" >
         </activity>
+        <activity
+            android:name=".Update"
+            android:label="@string/title_activity_update" >
+        </activity>
+        <activity
+            android:name=".update_attendance"
+            android:label="@string/title_activity_update_attendance" >
+        </activity>
+        <activity
+            android:name=".update_marks"
+            android:label="@string/title_activity_update_marks" >
+        </activity>
     </application>
 
 </manifest>

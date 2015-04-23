@@ -70,7 +70,7 @@ public class classes extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, stu_list.class);
+                Intent intent = new Intent(context, Update.class);
                 startActivity(intent);
 
             }
