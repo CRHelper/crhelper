@@ -1,32 +1,329 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#FFFFFF"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
     tools:context="com.example.udham.crhelper.attendance">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#3F51B5"
-        android:elevation="10dp"
-        android:orientation="horizontal">
+        android:background="#2196F3"
+        android:elevation="10dp">
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/attendance" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tt_title"
             android:text="Attendance"
+            android:textSize="30sp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="40sp" />
+            android:layout_marginStart="20dp"
+            android:id="@+id/name"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:elevation="5dp"
+        android:background="#FFFFFF">
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="0dp"
+
+                android:src="@drawable/attendance" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Roll no:"
+                    android:textColor="@color/background_material_dark"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/roll_no"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Email:"
+                    android:textColor="@color/background_material_dark"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/email"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Mobile:"
+                    android:textColor="@color/background_material_dark"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/mobile"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
 
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+
+        android:background="#FFFFFF">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="389dp"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:text="Attendance:"
+                        android:textColor="@color/background_material_dark"
+                        android:textSize="30sp"
+                        android:layout_marginStart="20dp"/>
+
+                    <TableLayout
+                        android:layout_width="353dp"
+                        android:layout_height="wrap_content"
+                        android:background="#CFD8DC"
+                        android:elevation="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="20dp"
+                        >
+
+                        <TableRow android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:elevation="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Subject 1"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="20dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Attendance 1"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/sub1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Total"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/total1"
+                                android:layout_column="2"
+                                />
+
+                        </TableRow>
+                        <TableRow android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Subject 2"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Attendance 2"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/sub2"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Total"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/total2"
+                                android:layout_column="2" />
+
+
+                        </TableRow>
+                        <TableRow android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Subject 3"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Attendance 3"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/sub3"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Total"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/total3"
+                                android:layout_column="2" />
+
+
+                        </TableRow>
+                        <TableRow android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Subject 4"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Attendance 4"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/sub4"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Total"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/total4"
+                                android:layout_column="2" />
+
+
+                        </TableRow>
+
+                        <TableRow android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Subject 5"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Attendance 5"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/sub5"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Total"
+                                android:textColor="@color/background_material_dark"
+                                android:textSize="20sp"
+                                android:layout_marginStart="40dp"
+                                android:id="@+id/total5"
+                                android:layout_column="2" />
+
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="308dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/res"
+                        android:text="Yo"
+                        android:textColor="@color/background_material_dark"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
