@@ -23,13 +23,7 @@ public class teachersActivity extends Activity {
         setContentView(R.layout.activity_teachers);
 
 
-        welcome=(TextView) findViewById(R.id.subTitle);
 
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        if (currentUser != null) {
-            // do stuff with the user
-            welcome.setText("Welcome "+currentUser.getUsername());
-        }
         addListenerOnButton();
     }
 
