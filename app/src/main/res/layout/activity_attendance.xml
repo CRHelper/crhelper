@@ -1,16 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:background="#FFFFFF"
-    tools:context="com.example.udham.crhelper.attendance">
+    tools:context="#607D8B">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#3F51B5"
         android:elevation="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
 
         <ImageView
             android:layout_width="80dp"
@@ -29,4 +30,359 @@
 
     </LinearLayout>
 
-</LinearLayout>
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lectures"
+        android:textColor="@color/background_material_dark"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+
+        android:layout_alignStart="@+id/tableLayout1" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CFD8DC"
+        android:elevation="10dp"
+
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tableLayout1">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Subject 1"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance1"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 2"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance2"/>
+
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 3"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance3"/>
+
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Labs"
+        android:textColor="@color/background_material_dark"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_alignStart="@+id/tableLayout2" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CFD8DC"
+        android:elevation="10dp"
+
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tableLayout2">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Subject 1"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance4"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 2"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance5"/>
+
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 3"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance6"/>
+
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tutorials"
+        android:textColor="@color/background_material_dark"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tableLayout2"
+        android:layout_alignStart="@+id/tableLayout3" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CFD8DC"
+        android:elevation="10dp"
+
+        android:layout_marginTop="490dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tableLayout3">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Subject 1"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance7"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 2"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance8"/>
+
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Subject 3"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="__%"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/attendance9"/>
+
+
+        </TableRow>
+
+
+
+       </TableLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:background="#607D8B"
+            android:orientation="horizontal"
+            android:id="@+id/avgAtt_Layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tableLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg. Attendance"
+                android:textSize="30sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90%"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="60sp"
+                android:id="@+id/avg_att_percent" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

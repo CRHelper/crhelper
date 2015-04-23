@@ -1,38 +1,80 @@
 package com.example.udham.crhelper;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 
-public class classes extends ActionBarActivity {
+public class classes extends Activity {
+
+    ImageButton b1,b2,b3,b4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classes);
+        addListenerOnButton();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_classes, menu);
-        return true;
+    public void addListenerOnButton() {
+
+        final Context context = this;
+
+        b1= (ImageButton) findViewById(R.id.imageButton1);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b2= (ImageButton) findViewById(R.id.imageButton2);
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b3= (ImageButton) findViewById(R.id.imageButton3);
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        b4= (ImageButton) findViewById(R.id.imageButton4);
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, stu_list.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

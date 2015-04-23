@@ -11,15 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:elevation="10dp"
-        android:background="#4CAF50"
-        android:orientation="horizontal">
+        android:background="#009688"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/tt" />
+            android:src="@drawable/classicon" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,23 +32,53 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:paddingStart="10dp"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Class"
-            android:textColor="#000000"
-            android:textSize="20sp"/>
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout">
 
 
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageButton1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@drawable/it_button"
+            android:layout_margin="2dp"
+            android:onClick="@string/title_activity_stu_list" />
 
-    </LinearLayout>
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageButton2"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="2dp"
+            android:src="@drawable/cse_button"
+            android:onClick="@string/title_activity_stu_list" />
+
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageButton3"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="2dp"
+            android:src="@drawable/ice_button"
+            android:onClick="@string/title_activity_stu_list" />
+
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageButton4"
+            android:layout_row="1"
+            android:layout_margin="2dp"
+            android:layout_column="2"
+            android:src="@drawable/ece_button"
+            android:onClick="@string/title_activity_stu_list" />
+    </GridLayout>
 
 
 </RelativeLayout>
