@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,8 @@ public class syllabus extends Activity {
     ListView list;
     String[] completion;
     String[] subject;
+
+    String link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXX0Z6ZmtuRXg1ZUU";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,8 @@ public class syllabus extends Activity {
                                         public void onItemClick(AdapterView<?> parent, View v,
                                                                 int position, long id) {
 
-                                            Intent myIntent = new Intent(v.getContext(), stuInfo.class);
-                                            startActivityForResult(myIntent, 0);
+                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+
 
                                         }
                                     }

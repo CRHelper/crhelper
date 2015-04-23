@@ -38,7 +38,7 @@
                 android:maxLines="1" android:singleLine="true" />
 
             <EditText android:id="@+id/re_type" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:hint="Retype Password"
+                android:layout_height="wrap_content" android:hint="Email(Optional)"
                 android:imeActionId="@+id/login"
                 android:imeOptions="actionUnspecified" android:inputType="textPassword"
                 android:maxLines="1" android:singleLine="true" />
