@@ -127,7 +127,9 @@ public class login extends Activity {
                             if (uname.equals(p.getString("username")) && pwd.equals(p.getString("Password"))) {
 
                                 Intent intent = new Intent(login.this, teachersActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
+                                finish();
 
                             }
                             else {
@@ -153,7 +155,9 @@ public class login extends Activity {
     public void student_login()
     {
         Intent intent = new Intent(this, StudentActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish();
     }
 
 

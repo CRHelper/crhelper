@@ -50,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(context, login.class);
-                intent.putExtra("key","student");
+                intent.putExtra("key", "student");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -64,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(context, login.class);
                 intent.putExtra("key","teacher");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
 
             }
         });
