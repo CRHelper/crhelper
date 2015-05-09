@@ -66,4 +66,5 @@
     <string name="title_activity_update">Update</string>
     <string name="title_activity_update_attendance">update_attendance</string>
     <string name="title_activity_update_marks">update_marks</string>
+    <string name="title_activity_card_view">cardView</string>
 </resources>

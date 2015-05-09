@@ -51,7 +51,14 @@
     </LinearLayout>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -170,5 +177,6 @@
             android:textColor="#607D8B"
             android:onClick="@string/title_activity_stu_info" />
     </LinearLayout>
-
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>
