@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 
 
@@ -30,6 +31,8 @@ public class StudentActivity extends Activity {
             // do stuff with the user
             welcome.setText("Welcome "+currentUser.getUsername());
         }
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
         addListenerOnButton();
 
     }
