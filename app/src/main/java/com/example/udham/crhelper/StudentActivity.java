@@ -17,7 +17,7 @@ import com.parse.ParseUser;
 
 public class StudentActivity extends Activity {
 
-    TextView tv,welcome,tv1,tv2,tv3,tv4;
+    TextView tv,welcome,tv1,tv2,tv3,tv4,tv5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +85,18 @@ public class StudentActivity extends Activity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(context, stuInfo.class);
+                startActivity(intent);
+
+            }
+        });
+
+        tv4= (TextView) findViewById(R.id.detail);
+
+        tv4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, profile_pic.class);
                 startActivity(intent);
 
             }

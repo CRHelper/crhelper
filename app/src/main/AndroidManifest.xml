@@ -138,6 +138,10 @@
             android:name=".About"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".profile_pic"
+            android:label="@string/title_activity_profile_pic" >
+        </activity>
     </application>
 
 </manifest>
