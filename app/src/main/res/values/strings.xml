@@ -2,7 +2,7 @@
     <string name="app_name">CRHelper</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Setting</string>
+    <string name="action_about">About</string>
     <string name="title_activity_teachers">teachersActivity</string>
     <string name="title_activity_assignment">assignmentActivity</string>
 
@@ -68,4 +68,6 @@
     <string name="title_activity_update_marks">update_marks</string>
     <string name="title_activity_card_view">cardView</string>
     <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_new_activity">New_activity</string>
+    <string name="action_settings">Settings</string>
 </resources>
