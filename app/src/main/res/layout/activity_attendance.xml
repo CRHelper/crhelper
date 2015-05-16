@@ -108,7 +108,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="389dp"
+                    android:layout_height="400dp"
                     android:orientation="vertical"
                     >
 
@@ -312,7 +312,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:id="@+id/res"
-                        android:text="Yo"
+                        android:text="Attendance"
                         android:textColor="@color/background_material_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="20dp"

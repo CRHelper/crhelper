@@ -1,5 +1,6 @@
 package com.example.udham.crhelper;
 
+import android.app.Activity;
 import android.media.Image;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
@@ -23,7 +24,7 @@ import com.parse.ParseUser;
 import java.util.List;
 
 
-public class profile_pic extends ActionBarActivity {
+public class profile_pic extends Activity {
 
     ParseImageView iv;
     ParseFile img;

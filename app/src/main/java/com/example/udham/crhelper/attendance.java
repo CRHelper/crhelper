@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class attendance extends Activity {
     String roll_no,email,mobile,name;
     String tot1,tot2,tot3,tot4,tot5;
     TextView t1,t2,t3,t4,t5;
+    int sub1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,50 +136,7 @@ public class attendance extends Activity {
 
 
 
-        //calculate();
-        //res.setText("Percentage of attendance is");
-
-
-
-        // nam.setText(name);
-    }
-
-    public void calculate()
-    {
-        int s1,s2,s3,s4,s5;
-        int at1,at2,at3,at4,at5;
-
-        at1=Integer.parseInt(atn1);
-        at2=Integer.parseInt(atn2);
-        at3=Integer.parseInt(atn3);
-        at4=Integer.parseInt(atn4);
-        at5=Integer.parseInt(atn5);
-
-        s1=Integer.parseInt(tot1);
-        s2=Integer.parseInt(tot2);
-        s3=Integer.parseInt(tot3);
-        s4=Integer.parseInt(tot4);
-        s5=Integer.parseInt(tot5);
-
-        float per;
-        float avg=((at1+at2+at3+at4+at5)/(s1+s2+s3+s4+s5));
-        per=avg*100;
-        if(per<50)
-        {
-            //Detained in subject
-            res.setText("Detained in subject");
-
-
-
-        }
-        else
-        {
-            //show perc
-            res.setText("Attendance is O.K");
-
-
-        }
-
 
     }
+
 }

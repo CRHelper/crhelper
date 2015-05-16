@@ -142,6 +142,10 @@
             android:name=".profile_pic"
             android:label="@string/title_activity_profile_pic" >
         </activity>
+        <activity
+            android:name=".student_list_info"
+            android:label="@string/title_activity_student_list_info" >
+        </activity>
     </application>
 
 </manifest>

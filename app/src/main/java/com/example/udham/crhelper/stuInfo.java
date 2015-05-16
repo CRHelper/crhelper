@@ -33,35 +33,20 @@ public class stuInfo extends Activity {
     String marks1,marks2,marks3,marks4,marks5;
     String remark1,remark2,remark3,remark4,remark5;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stu_info);
-       // getDetail();
 
         getData();
         putDetail();
 
         addListenerButton();
 
-
-
     }
 
-    public void getDetail()
-    {
-        ParseObject detail = new ParseObject("Marks");
-        detail.put("Roll_No", "09111503111");
-        detail.put("Name", "Geet Mehta");
-        detail.put("Email", "geet.mehta16@gmail.com");
-        detail.put("Subject_1", 80);
-        detail.put("Subject_2", 70);
-        detail.put("Subject_3", 90);
 
-        detail.saveInBackground();
 
-    }
     public void getData()
     {
         m1=(TextView) findViewById(R.id.marks1);
@@ -82,6 +67,7 @@ public class stuInfo extends Activity {
         nam=(TextView) findViewById(R.id.name);
 
         submit=(Button) findViewById(R.id.submit);
+
 
     }
 

@@ -47,7 +47,10 @@ public class stu_list extends Activity {
                                         public void onItemClick(AdapterView<?> parent, View v,
                                                                 int position, long id) {
 
-                                            Intent myIntent = new Intent(v.getContext(), stuInfo.class);
+                                            final String item = (String) parent.getItemAtPosition(position);
+                                            Log.d("Stu_List",item);
+                                            Intent myIntent = new Intent(v.getContext(), student_list_info.class);
+                                            myIntent.putExtra("key",item.toLowerCase());
                                             startActivityForResult(myIntent, 0);
 
                                         }
