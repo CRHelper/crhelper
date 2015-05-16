@@ -25,7 +25,7 @@ public class syllabus extends Activity {
     String[] completion;
     String[] subject;
 
-    String link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXX0Z6ZmtuRXg1ZUU";
+    String link;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +43,34 @@ public class syllabus extends Activity {
                                         public void onItemClick(AdapterView<?> parent, View v,
                                                                 int position, long id) {
 
-                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+                                            final String item = (String) parent.getItemAtPosition(position);
+                                            Log.d("Stu_List",item);
+                                            if(item.equals("completion % 1"))
+                                            {
+
+                                                link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXc0JJOFEwUWtabnc";
+                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+                                            }
+                                            else  if(item.equals("completion % 2"))
+                                            {
+                                                link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXUnRwQm9GUzdIVzg";
+                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+
+
+                                            }
+                                            if(item.equals("completion % 3"))
+                                            {
+                                                link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXb0lRdjJlbm9CODQ";
+                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+
+                                            }
+                                            if(item.equals("completion % 4"))
+                                            {
+                                                link="https://drive.google.com/uc?export=download&id=0B3JcR1uSjaDXUnRwQm9GUzdIVzg";
+                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+
+
+                                            }
 
 
                                         }

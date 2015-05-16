@@ -169,7 +169,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Other Info."
+            android:text="Marks."
 
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"

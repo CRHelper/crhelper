@@ -51,8 +51,14 @@ public class assignmentActivity extends Activity {
                                         public void onItemClick(AdapterView<?> parent, View v,
                                                                 int position, long id) {
 
-                                            Intent myIntent = new Intent(v.getContext(), stuInfo.class);
-                                            startActivityForResult(myIntent, 0);
+                                            Intent intent = new Intent(Intent.ACTION_SEND);
+                                            intent.setType("message/rfc822");
+                                            intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+                                            intent.putExtra(Intent.EXTRA_TEXT, "message");
+                                            Intent mailer = Intent.createChooser(intent, null);
+                                            startActivity(mailer);
+                                            //Intent myIntent = new Intent(v.getContext(), stuInfo.class);
+                                            //startActivityForResult(myIntent, 0);
 
                                         }
                                     }
