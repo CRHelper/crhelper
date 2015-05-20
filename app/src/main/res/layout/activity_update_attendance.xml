@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/roll_no"
         android:hint="Enter roll no"
-        android:textColor="@color/primary_dark_material_dark"
-        android:layout_below="@+id/linearLayout"
+        android:textColorHint="@color/abc_background_cache_hint_selector_material_dark"
+        android:textColor="@color/primary_dark_material_dark"        android:layout_below="@+id/linearLayout"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -112,8 +112,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/attn"
-        android:textColor="@color/primary_dark_material_dark"
-        android:layout_below="@+id/radioGroup"
+        android:hint="Enter attendance"
+        android:textColorHint="@color/abc_background_cache_hint_selector_material_dark"
+        android:textColor="@color/primary_dark_material_dark"        android:layout_below="@+id/radioGroup"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -28,6 +29,8 @@ public class stuInfo extends Activity {
     TextView r1,r2,r3,r4,r5;
     Button submit;
 
+    String feedbck;
+    EditText fb;
     TextView roll,eml,mob,nam;
     String roll_no,email,mobile,name;
     String marks1,marks2,marks3,marks4,marks5;
@@ -68,6 +71,7 @@ public class stuInfo extends Activity {
 
         submit=(Button) findViewById(R.id.submit);
 
+        fb= (EditText) findViewById(R.id.ed);
 
     }
 
@@ -149,7 +153,8 @@ public class stuInfo extends Activity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //do something
+
+                //add_code_here
             }
         });
 

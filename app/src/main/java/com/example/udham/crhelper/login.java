@@ -40,7 +40,6 @@ public class login extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         input();
         addListenerOnButton();
 

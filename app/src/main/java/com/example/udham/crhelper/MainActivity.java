@@ -73,13 +73,6 @@ public class MainActivity extends AppCompatActivity {
         if(isInternetPresent)
         {
 
-            new AsyncTask<Void, Void, Void>() {
-                @Override
-                public Void doInBackground(Void... params) {
-                    Parse.initialize(MainActivity.this, "Egsn9KbBiDHrcXa784wgbBHlZJebpmEoydC13ivt", "4duy7HwfneN5y1ZhEUipAjCp6umoDMiOJE7aVTQV");
-                    return null;
-                }
-            }.execute();
 
             addListenerOnButton();
 
